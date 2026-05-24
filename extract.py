@@ -1,9 +1,8 @@
 import requests
-
 from auth import APIAuthenticator
 
 
-def get_browse_results(query):
+def fetch_ebay_listing(query) -> dict:
 	headers = APIAuthenticator().get_ebay_requests_headers()
 	params = {"q": query}
 	response = requests.get(
@@ -12,10 +11,3 @@ def get_browse_results(query):
 		params=params,
 	)
 	return response.json()
-
-
-query = "laptop"
-
-
-results = get_browse_results(query)
-print(results.prettify())
