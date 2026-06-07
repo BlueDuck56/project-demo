@@ -11,3 +11,8 @@ def fetch_ebay_listing(query) -> dict:
 		params=params,
 	)
 	return response.json()
+
+
+
+if __name__ == "__main__":
+    print(fetch_ebay_listing("chessboard"))
