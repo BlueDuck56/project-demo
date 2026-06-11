@@ -1,5 +1,5 @@
 import requests
-from auth import APIAuthenticator
+from .auth import APIAuthenticator
 
 
 def fetch_ebay_listing(query) -> dict:
